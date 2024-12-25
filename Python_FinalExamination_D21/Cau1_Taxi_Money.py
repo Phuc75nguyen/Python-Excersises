@@ -1,7 +1,7 @@
 #Câu 1, tính tiền taxi
 """stt	kilomet (km)	đơn giá (VND/km)
 1	0 đến 0.3	20000
-2	 0 đến 3	18600
+2	0.3 đến 3	18600
 3	3 đến 11	14200
 4	11 đến 20	13000
 5	21 đến 30	12000
@@ -21,7 +21,7 @@ def taxi_bill_perKm(kilometers):
     if kilometers <= 0.3:
         gia_tien = kilometers*20000
     elif kilometers <= 3:
-        gia_tien = kilometers * 18600
+        gia_tien = 0.3*20000 + (kilometers-0.3)*18600
     elif kilometers <= 11:
         gia_tien = 3 * 18600 + (kilometers-3)*14200
     elif kilometers <= 20:
